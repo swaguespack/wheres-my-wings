@@ -1,4 +1,3 @@
-
 // Dependencies
 const express = require('express');
 const session = require('express-session');
@@ -38,6 +37,7 @@ app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 // middle ware 
 app.use(express.static(path.join(__dirname, 'public')));
 
