@@ -21,6 +21,17 @@ async function signupFormHandler(event) {
       }
     }
   }
-  
+
+   // Toggle the eye on and off in the password input to show password
+   const togglePassword = document.querySelector('#togglePassword');
+   const password = document.querySelector('#password-signup');
+ 
+   togglePassword.addEventListener('click', function (e) {
+     // toggle the type attribute
+     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+     password.setAttribute('type', type);
+     // toggle the eye slash icon
+     this.classList.toggle('fa-eye-slash');
+ });
 
 document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
