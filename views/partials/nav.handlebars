@@ -1,0 +1,13 @@
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  
+    <div class="navbar-end">
+      <a class="navbar-text" href="/">Home</a>
+      {{#if logged_in}}
+        <a class="navbar-text" id="logout" href="/">Logout</a>
+      {{else}}
+        <a class="navbar-text" id="login" href="/login">Login</a>
+        <a class="navbar-text" href="/signup">Sign Up</a>
+      {{/if}}
+    
+  </div>
+</nav>
