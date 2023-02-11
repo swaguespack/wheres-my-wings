@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",
-    "seed": "node seeds/index.js"
+    "seed": "node seeds/index.js",
+    "build": "parcel build --public-irl . homepage.handlebars"
   },
   "repository": {
     "type": "git",
@@ -34,10 +35,12 @@
     "inquirer": "^8.2.4",
     "mysql2": "^3.0.1",
     "ol": "^7.2.2",
+    "parcel": "^2.8.3",
     "passport-google-oauth20": "^2.0.0",
     "sequelize": "^6.28.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "parcel": "^2.8.3"
   }
 }
