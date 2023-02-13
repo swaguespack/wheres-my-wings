@@ -1,5 +1,6 @@
-const User = require("./User");
+const User = require('./User');
+const Maps = require('./Maps');
 
-//this file will need to be updated with associations once we have more models
+//Insert Associations once Favorites Model is created
 
-module.exports = { User }
+module.exports = { User, Maps };
