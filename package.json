@@ -4,7 +4,6 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
     "start": "node server.js",
     "seed": "node seeds/index.js",
     "build": "parcel build --public-irl . homepage.handlebars"
@@ -32,11 +31,9 @@
     "express-handlebars": "^6.0.7",
     "express-session": "^1.17.3",
     "inquirer": "^8.2.4",
+    "mysql": "^2.18.1",
     "mysql2": "^3.0.1",
     "passport-google-oauth20": "^2.0.0",
     "sequelize": "^6.28.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.20"
   }
 }
