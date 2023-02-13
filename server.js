@@ -34,6 +34,15 @@ app.use(session(sess));
 // Set Handlebars as the default template engine.
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+app.get('/', (req, res) => {
+  res.render('homepage');
+});
+app.get('/', (req, res) => {
+  res.render('login');
+});
+app.get('/', (req, res) => {
+  res.render('signup');
+});
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
