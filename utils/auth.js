@@ -1,11 +1,11 @@
-//redirect user if not logged in
+// Redirect user request through login route if not logged in
 const withAuth = (req, res, next) => {
     if (!req.session.logged_in) {
-        res.redirect('/login');
-        return;
+      res.redirect("/login");
     } else {
-        next()
+      next();
     }
-}
-
-module.exports = withAuth
+  };
+  
+  module.exports = withAuth;
+  
