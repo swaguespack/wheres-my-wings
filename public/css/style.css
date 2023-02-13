@@ -1,46 +1,53 @@
-html,
-body {
-  margin: 0;
+html, body {
   height: 100%;
 }
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-image: url("../images/Background.jpg");
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #cd8a06 !important;
+  width: 10rem;
+  margin: 3px;
+  font-weight: bold;
+}
+
 .navbar {
-  
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid orange;
 }
 
 .navbar a:hover {
   background-color: #9cd1f8;
 }
-.navbar-text {
-  
+
+.nav-link {
+  color:sienna;
   margin-right: 10px;
 }
 
-.div-center {
-  width: 400px;
+#square_homepage {
+  background-color: sienna;
+  color: white;
+  text-align: center;
+  width: 800px;
   height: 400px;
-  background-color: #fff;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  max-width: 100%;
-  max-height: 100%;
-  overflow: auto;
-  padding: 1em 2em;
-  display: table;
+  border: 1px solid black;
+  border-radius: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5rem;
 }
 
-.div.content {
-  display: table-cell;
-  vertical-align: middle;
+#pin {
+font-size: 30px;
 }
 
-#map {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
+@media screen and (min-width: 678px) {
+
+
 }
