@@ -1,7 +1,10 @@
+// Imports express' router object
 const router = require('express').Router();
-// imports our user route from the api folder
-const userRoutes = require('./user-routes.js');
 
+// Import route files within api folder
+const userRoutes = require('./userRoutes');
+
+// Directs route variable based on what comes from front end javascript or user
 router.use('/users', userRoutes);
 
 module.exports = router;

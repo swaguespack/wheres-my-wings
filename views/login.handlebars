@@ -1,25 +1,32 @@
- <div class="div-center">
-  <div class="content">
+<div class="container-fluid">
 
+  <div class="row p-6">
 
-  <h3>Login</h3>
-  
-  <form class="form login-form">
-  <div class="form-group">
-    <input class="input form-control" type="text" id="user-login" placeholder='Username' />
+    <div class="col">
+    </div>
+
+        <div class="col-3 mt-5">
+
+          <form class='login-form'>
+
+          
+            <div class='input-group input-group-lg mb-3'>
+              <input id='user-login' class='input' type='name' placeholder='Username'/>
+            </div>
+          
+            <div class='input-group input-group-lg mb-3'>
+              <input id='password-login' class='input' type='password' placeholder='Password'/>
+            </div>
+            <button id='loginbtn' class='button text-white'>Login</button>
+        </form>
+
+    </div>
+
+  <div class="col">
   </div>
-  <div class="form-group">
-  
-    <input class="input form-control" type="password" id="password-login" placeholder='Password'/>
-    <i class="far fa-eye" id="togglePassword" style="cursor: pointer;"></i>
-  
-  </div>
 
-    <button class="btn btn-secondary" type="submit">Login</button>
-    
-</form>
+  </div>
 
 </div>
 
-</div>
-<script src="/js/login.js"></script>
+<script src='./js/login.js'></script>
