@@ -1,4 +1,4 @@
-const {restaurant} = require('../models');
+const { Restaurant } = require('../models');
 
 const restaurantData = [
     {
@@ -74,5 +74,6 @@ const restaurantData = [
     },
 ];
 
-const restaurantMap = () => restaurant.bulkCreate(restaurantData);
-module.exports = restaurantMap;
+const seedRestaurants = () => Restaurant.bulkCreate(restaurantData);
+
+module.exports = seedRestaurants;
