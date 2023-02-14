@@ -1,3 +1,7 @@
+// THIS ROUTE IS CURRENTLY NOT CONNECTED
+// GOAL - reconnect this route so that the user has the option
+// to view food truck locations my neighborhood map
+
 // Imports express' router object
 const router = require('express').Router();
 // Imports maps model to use with our routes
