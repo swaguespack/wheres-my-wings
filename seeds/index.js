@@ -1,5 +1,6 @@
 const seedMaps = require('./map-seeds');
 const seedUsers = require('./users-seeds');
+const seedRestaurants = require('./restaurant-seeds');
 
 const sequelize = require('../config/connection');
 
@@ -15,6 +16,9 @@ const plantSeeds = async () => {
 
         await seedMaps();
         console.log('\n----- MAPS SEEDED -----\n');
+
+        await seedRestaurants();
+        console.log('\n----- FOOD TRUCKS SEEDED -----\n');
 
         process.exit(0);
     } catch(err){
