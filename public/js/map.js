@@ -17,6 +17,14 @@ L.tileLayer( 'http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
     subdomains: ['mt0','mt1','mt2','mt3']
 }).addTo( map );
 
-
+//THIS FUNCTION SHOULD WORK AFTER FOOD TRUCK SEED FILE IS CREATED:
+// Add Food Truck Markers to the map by looping over the array
+// call Leaflet function to create markers
+/*for ( var i=0; i < markers.length; ++i ) 
+{
+   L.marker( [markers[i].lat, markers[i].lng] )
+      .bindPopup( '<a href="' + markers[i].url + '" target="_blank" rel="noopener">' + markers[i].name + '</a>' )
+      .addTo( map );
+}*/
 
 
