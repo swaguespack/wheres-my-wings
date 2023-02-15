@@ -1,6 +1,10 @@
 {
   "name": "wheres-my-wings",
   "version": "1.0.0",
+  "engines":{
+    "node": "v18.14.0",
+    "npm":"9.4.2"
+  },
   "description": "",
   "main": "server.js",
   "scripts": {

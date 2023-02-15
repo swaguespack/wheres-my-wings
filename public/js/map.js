@@ -4,22 +4,6 @@ const eav = document.getElementById('eav');
 const midtown = document.getElementById('midtown');
 const mozleyPark = document.getElementById('mozleyPark');
 
-// Create a map and add a tile layer
-//
-let map
-if (map) map.remove();
-map = L.map( 'map', {
-  center: [33.748783, -84.388168],
-  minZoom: 2,
-  zoom: 11
-});
-
-L.tileLayer( 'http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
-    subdomains: ['mt0','mt1','mt2','mt3']
-}).addTo( map );
-
-
-
 // Array for restaurant markers
 markers = [
 
@@ -106,6 +90,18 @@ markers = [
   }
 ]
 
+// Render default and neighborhood maps
+let map
+
+map = L.map( 'map', {
+  center: [33.748783, -84.388168],
+  zoom: 11
+});
+
+L.tileLayer( 'http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+    subdomains: ['mt0','mt1','mt2','mt3']
+}).addTo( map );
+
 // Add Restaurant Markers to the map by looping over the markers array
 // call Leaflet function to create markers
 for ( var i=0; i < markers.length; ++i ) 
@@ -116,17 +112,15 @@ for ( var i=0; i < markers.length; ++i )
 }
 
 
-
-// Broken code for rendering default and neighborhood maps
-/*let map
-let googleStreets
-const renderMapData = (lat, lon, zoom = 5.5)=>{
+// Code to render default map from database
+// Commented out becasue could not figure out how to seee JAWSDB from local seed file
+/*const renderMap = (lat, lon, zoom = 11.1)=>{
   if (map) map.remove();
   map = L.map( 'map').setView([lat, lon],zoom);
 
   googleStreets = L.tileLayer( 'http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
       subdomains: ['mt0','mt1','mt2','mt3'],
-      maxZoom: 20
+      
   }).addTo( map );
 }
 const init = async () => {
@@ -135,13 +129,60 @@ const init = async () => {
   let { latitude, longitude } =
     await initialMapData.json();
 
-  renderMapData(latitude, longitude);
+  renderMap(latitude, longitude);
+
+// Add Restaurant Markers to the map by looping over the markers array
+// call Leaflet function to create markers
+for ( var i=0; i < markers.length; ++i ) 
+{
+   L.marker( [markers[i].latitude, markers[i].longitude] )
+      .bindPopup( '<a href=" ' + markers[i].url +'" target="_blank" rel="noopener">' + markers[i].name +'</a>')
+      .addTo( map );
+}
+
   } catch (err) {
     console.error(err);
     throw new Error("Init Error");
   }
+
+
+};*/
+
+// Broken code for rendering neighborhood maps on click
+/*
+const getMap = async (value) => {
+
+  if (!mapData) mapData = await (await fetch(`/api/maps/${value}`)).json();
+  let { latitude, longitude } = mapData;
+
+  renderMap(latitude, longitude, 11);
+init();
 };*/
 
 
 
 
+
+// Broken code for clicking buttons
+// Click functions to render specific map coordinates
+/*
+eav.addEventListener('click', (e) => {
+  e.preventDefault();
+  mapData = '';
+  let value = eav.innerText;
+  getMap(value);
+});
+
+midtown.addEventListener('click', (e) => {
+  e.preventDefault();
+  mapData = '';
+  let value = midtown.innerText;
+  getMap(value);
+});
+
+mozleyPark.addEventListener('click', (e) => {
+  e.preventDefault();
+  mapData = '';
+  let value = mozleyPark.innerText;
+  getMap(value);
+});*/
