@@ -16,6 +16,34 @@ L.tileLayer( 'http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
     subdomains: ['mt0','mt1','mt2','mt3']
 }).addTo( map );
 
+const renderMapMarkers = (markers) => {
+  for (let mark of markers) {
+    
+    let marker = new L.Marker([
+      mark.latitude,
+      mark.longitude,
+    ]);
+    marker.addTo(map);
+    marker
+      .bindPopup(`<h2><strong>${mark.name}</strong></h2>${mark.neighborhood}`)
+      .openPopup();
+  }
+
+  listenForClick();
+};
+
+// Add Restaurant Markers to the map by looping over the array
+// call Leaflet function to create markers
+
+/*for ( var i=0; i < markers.length; ++i ) 
+{
+   L.marker( [markers[i].lat, markers[i].lng] )
+      .bindPopup( '<a href="' + markers[i].url + '" target="_blank" rel="noopener">' + markers[i].name + '</a>' )
+      .addTo( map );
+}*/
+
+
+
 // Broken code for rendering default and neighborhood maps
 /*let map
 let googleStreets
@@ -31,10 +59,10 @@ const renderMap = (lat, lon, zoom = 5.5)=>{
 const init = async () => {
   try {
   let initialMapData = await fetch('/api/maps/default');
-  let { lattitude, longitude } =
+  let { latitude, longitude } =
     await initialMapData.json();
 
-  renderMap(lattitude, longitude);
+  renderMap(latitude, longitude);
   } catch (err) {
     console.error(err);
     throw new Error("Init Error");
@@ -42,13 +70,5 @@ const init = async () => {
 };*/
 
 
-//THIS FUNCTION SHOULD WORK AFTER FOOD TRUCK SEED FILE IS CREATED:
-// Add Food Truck Markers to the map by looping over the array
-// call Leaflet function to create markers
-/*for ( var i=0; i < markers.length; ++i ) 
-{
-   L.marker( [markers[i].lat, markers[i].lng] )
-      .bindPopup( '<a href="' + markers[i].url + '" target="_blank" rel="noopener">' + markers[i].name + '</a>' )
-      .addTo( map );
-}*/
+
 
