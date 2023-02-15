@@ -3,18 +3,69 @@ html, body {
 }
 
 body {
-  font-family: 'Barlow', sans-serif;
+  font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  /* font-family: Montserrat, sans-serif; */
+  /* font-family: 'Barlow', sans-serif;
     font-family: 'News Cycle', sans-serif;
     font-family: 'Raleway', sans-serif;
     font-family: 'Rubik Mono One', sans-serif;
-    font-family: 'Staatliches', cursive;
-  background-color: #F5EED2;
+    font-family: 'Staatliches', cursive; */
+  /* background-color: #F5EED2;
   background-image: url("../images/Background.jpg");
   background-size: cover;
   background-position: center;
-  box-sizing: border-box;
+  box-sizing: border-box; */
 }
 
+
+
+
+/* ---------- JUMBOTRON ------------- */
+
+.jumbotron {
+  background-color: #f4511e;
+  color: #fff;
+  padding: 100px 25px;
+  font-family: Montserrat, sans-serif;
+}
+
+.container-fluid {
+  padding: 60px 50px;
+}
+
+    h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+  
+    h5 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+/* VENDOR SLIDES HOME */
+    .bg-grey {
+      background-color: #f6f6f6;
+    }
+
+    .slideanim {
+      visibility: hidden;
+    }
+  
+    .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+    }
+
+        
 button {
   font-family: 'News Cycle', sans-serif;
   background-color: #cd8a06 !important;
@@ -23,21 +74,48 @@ button {
   font-weight: bold;
 }
 
+
+/* -------- NAVIGATION BAR ------------- */
 .navbar {
-  font-family: 'News Cycle', sans-serif;
-  border-bottom: 2px solid orange;
+  margin-bottom: 0;
+  background-color: #f4511e;
+  z-index: 9999;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+  font-family: Montserrat, sans-serif;
+}
+.navbar li a, .navbar .navbar-brand {
+color: #fff !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color: #f4511e !important;
+  background-color: #fff !important;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
 }
 
-.navbar a:hover {
+/* .navbar {
+  font-family: 'News Cycle', sans-serif;
+  font-size: large;
+  border-bottom: 2px solid orange;
+} */
+
+/* .navbar a:hover {
   background-color: #9cd1f8;
 }
 
 .nav-link {
   color:sienna;
   margin-right: 10px;
-}
+} */
 
-#square_homepage {
+
+/* #square_homepage {
   background-color: sienna;
   color: white;
   text-align: center;
@@ -48,11 +126,12 @@ button {
   margin-left: auto;
   margin-right: auto;
   padding-top: 5rem;
-}
+} */
 
 #pin {
 font-size: 30px;
 }
+
 .login-form {
   font-family: 'News Cycle', sans-serif;
 }
@@ -61,7 +140,6 @@ font-size: 30px;
   font-family: 'News Cycle', sans-serif;
 }
 
-
 #dashboard {
   font-family: 'Barlow', sans-serif;
   font-weight: 700;
@@ -69,6 +147,4 @@ font-size: 30px;
 }
 
 @media screen and (min-width: 678px) {
-
-
 }
