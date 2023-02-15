@@ -92,10 +92,29 @@ markers = [
 
 // Render default and neighborhood maps
 let map
-//let mapData
-let googleStreets
 
-const renderMap = (lat, lon, zoom = 11.1)=>{
+map = L.map( 'map', {
+  center: [33.748783, -84.388168],
+  zoom: 11
+});
+
+L.tileLayer( 'http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+    subdomains: ['mt0','mt1','mt2','mt3']
+}).addTo( map );
+
+// Add Restaurant Markers to the map by looping over the markers array
+// call Leaflet function to create markers
+for ( var i=0; i < markers.length; ++i ) 
+{
+   L.marker( [markers[i].latitude, markers[i].longitude] )
+      .bindPopup( '<a href=" ' + markers[i].url +'" target="_blank" rel="noopener">' + markers[i].name +'</a>')
+      .addTo( map );
+}
+
+
+// Code to render default map from database
+// Commented out becasue could not figure out how to seee JAWSDB from local seed file
+/*const renderMap = (lat, lon, zoom = 11.1)=>{
   if (map) map.remove();
   map = L.map( 'map').setView([lat, lon],zoom);
 
@@ -127,7 +146,7 @@ for ( var i=0; i < markers.length; ++i )
   }
 
 
-};
+};*/
 
 // Broken code for rendering neighborhood maps on click
 /*
@@ -137,12 +156,12 @@ const getMap = async (value) => {
   let { latitude, longitude } = mapData;
 
   renderMap(latitude, longitude, 11);
-
+init();
 };*/
 
 
 
-init();
+
 
 // Broken code for clicking buttons
 // Click functions to render specific map coordinates
