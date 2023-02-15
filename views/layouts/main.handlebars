@@ -17,14 +17,14 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;1,500;1,700;1,900&family=News+Cycle&family=Raleway:wght@100;200;300;600;700&family=Rubik+Mono+One&family=Staatliches&display=swap"
       rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel='stylesheet' href='./css/style.css'/>
     <title>wheres-my-wings</title>
   </head>
   <nav>
   {{> nav}}
   </nav>
-  <body>  
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">  
     <div>
     {{{body}}}
     </div>
@@ -33,6 +33,6 @@
         <script src='./js/logout.js'></script>
     {{/if}}
    
-
+    
   </body>
 </html>
