@@ -54,7 +54,7 @@ Maps.findOne({
 });
 
 //Add Map
-
+/*
 router.post('/', async (req, res) => {
   try {
     const newMap = await Maps.create({
@@ -66,6 +66,6 @@ router.post('/', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-});
+});*/
 
 module.exports = router;
