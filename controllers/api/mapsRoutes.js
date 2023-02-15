@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 });
 
 //Find Default Map 
-router.get('/default', (req, res) => {
+/*router.get('/default', (req, res) => {
 Maps.findOne({
       where: 
       { neighborhood: 'DEFAULT' },
@@ -27,6 +27,19 @@ Maps.findOne({
     console.error(err);
     res.status(500).json(err);
   })
+});*/
+
+router.get('/default', async (req, res) => {
+  try {
+    const defaultMapData = await Maps.findOne({
+      where: { neighborhood: 'DEFAULT' },
+    });
+    console.log(defaultMapData);
+    res.status(200).json(defaultMapData);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json(err);
+  }
 });
 
 //Find Neighborhood Maps
