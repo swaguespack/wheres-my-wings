@@ -7,7 +7,7 @@
 
 Where's My Wings is an application designed to locate the best chicken wings locations and food trucks in the Atlanta area.
 
-![SCREEN SHOT](./screenshots/wings_map.png)
+![SCREEN SHOT](./public/images/wings_map.png)
 
 
 ## USER STORY 
@@ -17,7 +17,13 @@ As an amateur wing/food connoisseur, I want a secure application I can log into 
 
 ## TECHNOLOGIES UTILIZED
 
-Google Maps API
+* Leaflet
+* Node.js
+* Express
+* MySQL
+* Sequelize
+* Handlebars
+* Bootstrap
 
 
 ## CREDITS
