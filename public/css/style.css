@@ -6,17 +6,6 @@ body {
   font: 400 15px Lato, sans-serif;
     line-height: 1.8;
     color: #818181;
-  /* font-family: Montserrat, sans-serif; */
-  /* font-family: 'Barlow', sans-serif;
-    font-family: 'News Cycle', sans-serif;
-    font-family: 'Raleway', sans-serif;
-    font-family: 'Rubik Mono One', sans-serif;
-    font-family: 'Staatliches', cursive; */
-  /* background-color: #F5EED2;
-  background-image: url("../images/Background.jpg");
-  background-size: cover;
-  background-position: center;
-  box-sizing: border-box; */
 }
 
 
@@ -54,6 +43,13 @@ body {
       margin-bottom: 30px;
     }
 
+
+
+/* ABOUT */
+#about{
+  background-image: url('/public/images/Background.jpg');
+}
+
 /* VENDOR SLIDES HOME */
     .bg-grey {
       background-color: #f6f6f6;
@@ -63,11 +59,27 @@ body {
       visibility: hidden;
     }
   
-    .thumbnail {
+    .card {
       padding: 0 0 15px 0;
       border: none;
       border-radius: 0;
+      background-color: #F5EED2;
     }
+    .card-text{
+      font-family: Montserrat, sans-serif;
+      font-size: 13px !important;
+      line-height: 1.42857143 !important;
+      font-style:normal
+     }
+
+  .restaurant{
+  padding: 2% 5%;
+  margin: 5%, auto;
+  width: 90%;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  }
 
         
 button {
@@ -109,34 +121,6 @@ color: #fff !important;
   color: #fff !important;
 }
 
-/* .navbar {
-  font-family: 'News Cycle', sans-serif;
-  font-size: large;
-  border-bottom: 2px solid orange;
-} */
-
-/* .navbar a:hover {
-  background-color: #9cd1f8;
-}
-
-.nav-link {
-  color:sienna;
-  margin-right: 10px;
-} */
-
-
-/* #square_homepage {
-  background-color: sienna;
-  color: white;
-  text-align: center;
-  width: 800px;
-  height: 400px;
-  border: 1px solid black;
-  border-radius: 5%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 5rem;
-} */
 
 #pin {
 font-size: 30px;
